@@ -11,7 +11,11 @@
 # "Abba" - палиндром
 # "qwerty" - не палиндром
 
-word = "Abba"
+word = input("Введите значение:\n")
 
 # Ваше решение
 
+if word[::].lower() ==word[::-1].lower():
+    print(f"{word} - палиндром")
+else:
+    print(f"{word} - не палиндром")
