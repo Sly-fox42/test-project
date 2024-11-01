@@ -25,4 +25,18 @@
 
 # Ваше решение:
 
+score =(input("Введите ваш балл: "))
+if score.isdigit():
 
+    if int(score) >= 90 and int(score)<= 100:
+        print( "Ваша оценка: A")
+    elif int(score) >= 80 and int(score)<= 89:
+        print( "Ваша оценка: B")
+    elif int(score) >= 70 and int(score)<= 79:
+        print( "Ваша оценка: C")
+    elif int(score) >= 60 and int(score)<= 69:
+        print( "Ваша оценка: D")
+    elif int(score) <= 59 :
+        print( "Ваша оценка: F")
+elif score.isalpha():
+    print("Некорректный балл")
