@@ -12,3 +12,16 @@
 #   - Математические операторы (lesson7),
 #   - Функции input() и print() (lesson10)
 #   - Строки - Методы строк (lesson12)
+
+number_1 =input("Введите первое число: ")
+number_2 =input("Введите Второе число: ")
+
+if number_1.isalpha() or number_2.isalpha():
+    print("Введены некорректные данные")
+
+
+if number_1.isdigit() and number_2.isdigit():
+    if (int(number_1)/int(number_2)).is_integer():
+        print("Кратно")
+    else:
+        print("Не кратно")
