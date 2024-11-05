@@ -28,15 +28,18 @@
 
 # Ваше решение:
 
-student1_estimation1=int(input("Введите оценку студента 1"))
-student1_estimation2=int(input("Введите оценку студента 2"))
-student1_estimation3=int(input("Введите оценку студента 3"))
-student1_estimation4=int(input("Введите оценку студента 4"))
-student1_estimation5=int(input("Введите оценку студента 5"))
+student1_estimation1=int(input("Введите оценку студента 1: "))
+student1_estimation2=int(input("Введите оценку студента 2: "))
+student1_estimation3=int(input("Введите оценку студента 3: "))
+student1_estimation4=int(input("Введите оценку студента 4: "))
+student1_estimation5=int(input("Введите оценку студента 5: "))
 student1_estimation =[student1_estimation1,student1_estimation2,student1_estimation3,student1_estimation4,student1_estimation5]
 sum_est =0
-for item in student1_estimation:
-    sum_est+=student1_estimation[item]
+if 0>=student1_estimation1 or student1_estimation2 or student1_estimation3 or student1_estimation4 or student1_estimation5 <=100:
+    for item in student1_estimation:
+         sum_est+=item
+else:
+    print("Вы ввели неверные данные ")
 print(f"Средняя оценка: {(sum_est/len(student1_estimation))}")
 
 print(f"Самая низкая оценка: {min(student1_estimation)}")
