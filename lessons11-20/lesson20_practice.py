@@ -17,6 +17,7 @@
 # Введите название книги 3: Преступление и наказание
 # Введите название книги 4: Мастер и Маргарита
 # Введите название книги 5: Анна Каренина
+
 #
 # Добавьте еще две книги: Унесенные ветром, Война и мир
 #
@@ -32,10 +33,30 @@
 #   - Циклы for (lesson18)
 #   - Списки (lesson19)
 #   - Методы списков (lesson20)
-book1=input("Введите название книги 1: ")
-book2=input("Введите название книги 1: ")
-book3=input("Введите название книги 1: ")
-book4=input("Введите название книги 1: ")
-book5=input("Введите название книги 1: ")
-
 my_list =[]
+
+book1=input("Введите название книги 1: ")
+book2=input("Введите название книги 2: ")
+book3=input("Введите название книги 3: ")
+book4=input("Введите название книги 4: ")
+book5=input("Введите название книги 5: ")
+if len(my_list)<5:
+    my_list.append(book1)
+    my_list.append(book2)
+    my_list.append(book3)
+    my_list.append(book4)
+    my_list.append(book5)
+
+other_list =["Унесенные ветром", "Война и мир"]
+my_list.extend(other_list)
+for i in my_list:
+    j =my_list.index(i)
+    my_list[j] = i.upper()
+print(my_list)
+
+r_list =input("Введите название книги для удаления: ")
+
+for item in my_list:
+    if item == r_list.upper():
+        my_list.remove(item)
+print(my_list)
