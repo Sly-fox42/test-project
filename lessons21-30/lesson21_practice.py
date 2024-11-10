@@ -51,3 +51,20 @@
 
 # Ваше решение:
 
+print("Введите 7 последних прочитанных вами книг")
+books = []
+
+for i in range(7):
+    book = input("Введите название книги: ")
+    books.append(book)
+
+print("Список книг:")
+for i, a_book in enumerate(books):
+
+    print(f"{i + 1}. {a_book}")
+
+print("Список книг, у которых название длиннее 15 символов: ")
+for i in books:
+    if len(i)>15:
+        books.remove(i)
+        print(i)
